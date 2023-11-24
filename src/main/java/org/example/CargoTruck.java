@@ -11,5 +11,4 @@ public class CargoTruck extends Vehicle {
         System.out.println("Cargo truck is speeding up");
         return 15 * speedIncrement;
     }
-//dljaljsdk
 }
