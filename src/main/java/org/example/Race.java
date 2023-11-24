@@ -44,10 +44,10 @@ public class Race {
             for (int i = 0; i < vehicles.size(); i++) {
                 Vehicle vehicle = vehicles.get(i);
                 RaceRegister register = registers.get(vehicle);
-                if (register.getDistance() < raceTrack.distance) {
+                if (register.getDistance() < raceTrack.distance && register.isCompletedRace()!=true) {
                     double newDistance = register.getDistance() + vehicle.accelerate(new Random().nextInt(50));
                     register.setDistance(newDistance);
-                } else if (register.getDistance() > raceTrack.distance) {
+                } else if (register.getDistance() > raceTrack.distance && register.isCompletedRace()!=true) {
                     int newLaps = register.getLaps() + 1;
                     register.setLaps(newLaps);
                     register.setDistance(0.0);
@@ -66,6 +66,7 @@ public class Race {
                 return false;
             }
             System.out.println(vehicle.getType()+"!! Has won");
+            register.setCompletedRace(true);
         }
         return true;
 

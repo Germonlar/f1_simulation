@@ -12,7 +12,7 @@ public class Main {
         Bus bus = new Bus("Bus");
         Car car = new Car("Red","ABCD",105,2000,"ABCD",100,50);
         Motorcycle motorcycle = new Motorcycle();
-        Race race = new Race(vehiclesList,silverstone,17,5);
+        Race race = new Race(vehiclesList,silverstone,17,2);
 
         vehiclesList.add(bus);
         vehiclesList.add(car);
