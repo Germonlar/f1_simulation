@@ -31,13 +31,6 @@ public class Race {
 
     public void startRace() {
 
-        for (int i = 0; i < vehicles.size(); i++) {
-            registers.put(vehicles.get(i), new RaceRegister(0.0, 0, false));
-            if (vehicles.get(i) instanceof Car) {
-                ((Car) vehicles.get(i)).turnEngineOn();
-            }
-        }
-
         while (!raceCompleted()) {
             for (int i = 0; i < vehicles.size(); i++) {
                 Vehicle vehicle = vehicles.get(i);
